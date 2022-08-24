@@ -1,27 +1,10 @@
-import { Component } from '@angular/core';
-import { reduce } from 'rxjs';
+import { Component} from '@angular/core';
 
-@Component({
+@Component ({
   selector: 'app-root',
   template: `
-  <!-- stampa titolo -->
-  <h1 class="ci">ciao</h1>
-
-  <!-- stampa console log -->
-  <input type="area"(click)="clickHandler()">
-
-  <!-- stamap di un array -->
-  <li
-    *ngFor="let user of users">
-    {{user}}
-  </li>
-  `
-})
-export class AppComponent {
-  clickHandler() {
-    console.log('ciao');
+    <div *ngIf="true"><h1>ciao</h1></div>
+  `,
+  })
+  export class AppComponent {
   }
-  
-  users = ['Mario', 'Cosimo','Fabio'];
-
-}
