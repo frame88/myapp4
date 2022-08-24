@@ -1,10 +1,15 @@
 import { Component } from '@angular/core';
+import { reduce } from 'rxjs';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: `
+  <h1 class="ci">ciao</h1>
+  <input (click)="clickHandler()" type=" ">  
+  `
 })
 export class AppComponent {
-  title = 'myapp4';
+  clickHandler() {
+    console.log('ciao');
+  }
 }
