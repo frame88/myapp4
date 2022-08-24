@@ -1,10 +1,19 @@
-import { Component} from '@angular/core';
+import { Component } from '@angular/core';
 
-@Component ({
+@Component({
   selector: 'app-root',
   template: `
-    <div *ngIf="true"><h1>ciao</h1></div>
+    <h1>{{today}}</h1>
+    <h1>{{today | date: 'dd MMMM YYYY'}}</h1>
+    <h1>{{yourmoney | currency}}</h1>
+    <h1>{{yourbitcoins | number: '2.2-4'}}</h1>
+    <pre>{{yourJSON | json}}</pre>
   `,
-  })
-  export class AppComponent {
-  }
+  styles: []
+})
+export class AppComponent {
+  today = Date.now();
+  yourmoney = 1200;
+  yourbitcoins = 0.12343242;
+  yourJSON = { id: 1, name: 'Fabio' };
+}
